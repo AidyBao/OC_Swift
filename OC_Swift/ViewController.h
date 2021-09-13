@@ -9,6 +9,11 @@
 
 @interface ViewController : UIViewController
 
+@property (atomic, strong) NSString *password;
+@property (atomic, assign) float height;
+
+-(void)logMe:(NSString*)logMe logYou:(NSString*)logYou;
+-(void) ocStaticFunc:(NSString*)log;
 
 @end
 

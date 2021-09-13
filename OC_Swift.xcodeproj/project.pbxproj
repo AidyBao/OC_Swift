@@ -17,6 +17,8 @@
 		6EC8BA3E26EF0431008C149E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC8BA3D26EF0431008C149E /* main.m */; };
 		6EC8BA4826EF0431008C149E /* OC_SwiftTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC8BA4726EF0431008C149E /* OC_SwiftTests.m */; };
 		6EC8BA5326EF0431008C149E /* OC_SwiftUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC8BA5226EF0431008C149E /* OC_SwiftUITests.m */; };
+		6EC8BA6326EF04AB008C149E /* TestSwiftOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC8BA6126EF04AB008C149E /* TestSwiftOne.swift */; };
+		6EC8BA6426EF04AB008C149E /* TestSwiftOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EC8BA6226EF04AB008C149E /* TestSwiftOne.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,9 @@
 		6EC8BA4E26EF0431008C149E /* OC_SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OC_SwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EC8BA5226EF0431008C149E /* OC_SwiftUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OC_SwiftUITests.m; sourceTree = "<group>"; };
 		6EC8BA5426EF0431008C149E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EC8BA6026EF04AB008C149E /* OC_Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OC_Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		6EC8BA6126EF04AB008C149E /* TestSwiftOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSwiftOne.swift; sourceTree = "<group>"; };
+		6EC8BA6226EF04AB008C149E /* TestSwiftOne.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestSwiftOne.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,12 +117,15 @@
 				6EC8BA2C26EF042F008C149E /* SceneDelegate.m */,
 				6EC8BA2E26EF042F008C149E /* ViewController.h */,
 				6EC8BA2F26EF042F008C149E /* ViewController.m */,
+				6EC8BA6126EF04AB008C149E /* TestSwiftOne.swift */,
+				6EC8BA6226EF04AB008C149E /* TestSwiftOne.xib */,
 				6EC8BA3126EF042F008C149E /* Main.storyboard */,
 				6EC8BA3726EF0431008C149E /* Assets.xcassets */,
 				6EC8BA3926EF0431008C149E /* LaunchScreen.storyboard */,
 				6EC8BA3C26EF0431008C149E /* Info.plist */,
 				6EC8BA3D26EF0431008C149E /* main.m */,
 				6EC8BA3426EF042F008C149E /* OC_Swift.xcdatamodeld */,
+				6EC8BA6026EF04AB008C149E /* OC_Swift-Bridging-Header.h */,
 			);
 			path = OC_Swift;
 			sourceTree = "<group>";
@@ -206,6 +214,7 @@
 				TargetAttributes = {
 					6EC8BA2426EF042F008C149E = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 					6EC8BA4226EF0431008C149E = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -242,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EC8BA6426EF04AB008C149E /* TestSwiftOne.xib in Resources */,
 				6EC8BA3B26EF0431008C149E /* LaunchScreen.storyboard in Resources */,
 				6EC8BA3826EF0431008C149E /* Assets.xcassets in Resources */,
 				6EC8BA3326EF042F008C149E /* Main.storyboard in Resources */,
@@ -269,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EC8BA6326EF04AB008C149E /* TestSwiftOne.swift in Sources */,
 				6EC8BA3E26EF0431008C149E /* main.m in Sources */,
 				6EC8BA3026EF042F008C149E /* ViewController.m in Sources */,
 				6EC8BA2A26EF042F008C149E /* AppDelegate.m in Sources */,
@@ -445,7 +456,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = S5TCHNZK6J;
 				INFOPLIST_FILE = OC_Swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -454,6 +467,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fowit.gold.OC-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OC_Swift/OC_Swift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -463,7 +479,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = S5TCHNZK6J;
 				INFOPLIST_FILE = OC_Swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -472,6 +490,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fowit.gold.OC-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OC_Swift/OC_Swift-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -479,6 +499,7 @@
 		6EC8BA5B26EF0431008C149E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5TCHNZK6J;
@@ -499,6 +520,7 @@
 		6EC8BA5C26EF0431008C149E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5TCHNZK6J;
@@ -519,6 +541,7 @@
 		6EC8BA5E26EF0431008C149E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5TCHNZK6J;
 				INFOPLIST_FILE = OC_SwiftUITests/Info.plist;
@@ -537,6 +560,7 @@
 		6EC8BA5F26EF0431008C149E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5TCHNZK6J;
 				INFOPLIST_FILE = OC_SwiftUITests/Info.plist;
